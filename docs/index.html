@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical, reproducible guide to high-performance computing, parallel programming, and scientific AI. Learn locally, then run on Slurm and PBS clusters.">
+  <meta name="theme-color" content="#070C19">
+  <title>HPC for Scientific AI · From Your Laptop to a Supercomputer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="logo" href="#home"><span class="mark">⌘</span> HPC<span class="accent">/</span>Scientific AI <span class="version">v0.1.1</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#definitions">Definitions</a><a href="#curriculum">Curriculum</a><a href="#labs">Labs</a><a href="#platforms">Platforms</a><a href="#instructors">Teach</a>
+      <a class="github" href="https://github.com/YOUR_USERNAME/hpc-for-scientific-ai">GitHub ↗</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> OPEN EDUCATIONAL RESOURCE · SCIENTIFIC COMPUTING</div>
+          <h1>From your laptop<br>to a <em>supercomputer.</em></h1>
+          <p class="subtitle">A hands-on learning path through high-performance computing, parallel programming, and reproducible scientific AI. One mathematical problem. Multiple computing architectures.</p>
+          <div class="actions"><a class="button primary" href="#labs">Explore the first labs <span>↗</span></a><a class="button ghost" href="#curriculum">View curriculum →</a></div>
+          <div class="hero-stats"><span><b>2</b> executable labs</span><span><b>2</b> scheduler families</span><span><b>0</b> Python dependencies</span></div>
+        </div>
+        <div class="terminal" aria-label="Example of running the first computational lab locally">
+          <div class="terminal-head"><div class="dots"><i></i><i></i><i></i></div> <span>research-compute ~ %</span><span class="chip">PYTHON 3.10+</span></div>
+          <pre><span class="comment"># Learn locally. Scale responsibly.</span>
+<span class="prompt">$</span> python3 labs/01-first-hpc-job/hello.py
+<span class="string">"lab"</span>: <span class="light">"01-first-hpc-job"</span>
+<span class="string">"scheduler"</span>: <span class="light">"local/unknown"</span>
+<span class="string">"seed"</span>: <span class="light">42</span>
+
+<span class="comment"># Same program, different scheduler</span>
+<span class="prompt">$</span> sbatch .../01-first-job.sbatch
+<span class="prompt">$</span> qsub .../01-first-job.pbs
+
+<span class="success">✓</span> Verify results before benchmarking<span class="cursor">▋</span></pre>
+          <div class="terminal-foot"><span>LAB 01 — SCIENTIFIC JOBS</span><span>PORTABLE BY DESIGN</span></div>
+        </div>
+      </div>
+      <div class="grid-backdrop" aria-hidden="true"></div>
+    </section>
+    <section class="section container" id="principles">
+      <div class="section-head"><span class="kicker">THE PHILOSOPHY</span><h2>Learn the principle.<br><span>Then learn the machine.</span></h2><p>HPC education should not depend on a single university allocation or a single GPU vendor.</p></div>
+      <div class="principles"><article class="feature"><div class="feature-icon">01 /</div><h3>Mathematics first</h3><p>Every experiment has a scientific question and a correctness check, not just a shell command.</p></article><article class="feature"><div class="feature-icon">02 /</div><h3>Portable execution</h3><p>Run on your laptop, then move to Slurm or PBS with unchanged scientific code.</p></article><article class="feature"><div class="feature-icon">03 /</div><h3>Responsible scaling</h3><p>Profile, budget resources, and understand when a supercomputer is—and is not—appropriate.</p></article></div>
+    </section>
+    <section class="section contrast" id="definitions"><div class="container"><div class="section-head"><span class="kicker">START WITH THE DEFINITIONS</span><h2>Precise language.<br><span>Clear computational scope.</span></h2><p>AI, machine learning, scientific computing, and HPC overlap—but they are not synonyms. These are working definitions for the course.</p></div><div class="terms-grid"><article class="term-card"><h3>Scientific AI</h3><p>AI methods used to advance scientific modeling, prediction, inference, experimentation, analysis, or discovery. AI for Science is a widely used related term.</p></article><article class="term-card"><h3>Scientific ML (SciML)</h3><p>Machine learning developed or applied for scientific and engineering problems, often connected with mathematical models, scientific data, or numerical methods.</p></article><article class="term-card"><h3>HPC for Scientific AI</h3><p>Scalable computation supporting AI-enabled scientific workflows, including model execution, training, scientific data processing, and large-scale evaluation.</p></article><article class="term-card"><h3>HPC for Scientific ML</h3><p>Scalable computing for scientific ML specifically: parallel training, accelerators, scientific data pipelines, inference, and performance optimization.</p></article></div><p class="footnote">Our first two labs teach HPC and numerical science, not AI. AI-driven scientific labs will be introduced in later modules. <a class="term-link" href="https://github.com/YOUR_USERNAME/hpc-for-scientific-ai/blob/main/TERMINOLOGY.md">Read the complete, sourced terminology guide →</a></p></div></section>
+    <section class="section contrast" id="curriculum"><div class="container"><div class="section-head"><span class="kicker">LEARNING PATH</span><h2>Twelve modules.<br><span>One coherent journey.</span></h2><p>Structured for a university course, self-study, or research-group onboarding.</p></div><div class="modules"><div class="module"><span class="module-label">FOUNDATIONS</span><h3>01–04</h3><p>Architecture · SSH · Scheduling · Environments</p></div><div class="module"><span class="module-label">PARALLEL SCIENCE</span><h3>05–07</h3><p>Numerics · Task parallelism · MPI · Profiling</p></div><div class="module"><span class="module-label">AI AT SCALE</span><h3>08–10</h3><p>Accelerators · Distributed ML · Data pipelines</p></div><div class="module"><span class="module-label">RESEARCH PRACTICE</span><h3>11–12</h3><p>Reliability · Reproducibility · Capstone</p></div></div><p class="footnote">The full twelve-module curriculum is planned. Only the first two hands-on labs are available in v0.1.</p></div></section>
+    <section class="section container" id="labs"><div class="section-head"><span class="kicker">GET STARTED</span><h2>Runnable from day one.</h2><p>Start with Python 3.10+ and a terminal. No cluster access or additional packages required.</p></div><div class="lab-grid"><article class="lab-card"><div class="lab-meta"><span class="tag active">AVAILABLE</span><span>LAB 01</span></div><h3>Your first scientific job</h3><p>Create a deterministic computation record and understand the separation between your program and your job scheduler.</p><code>python3 labs/01-first-hpc-job/hello.py</code><a href="https://github.com/YOUR_USERNAME/hpc-for-scientific-ai/tree/main/labs/01-first-hpc-job">Open lab →</a></article><article class="lab-card"><div class="lab-meta"><span class="tag active">AVAILABLE</span><span>LAB 02</span></div><h3>Parallel parameter sweeps</h3><p>Solve the heat equation for four parameter settings, compare with the analytic solution, and combine verified outputs.</p><code>python3 labs/02-parallel-parameter-sweeps/sweep.py</code><a href="https://github.com/YOUR_USERNAME/hpc-for-scientific-ai/tree/main/labs/02-parallel-parameter-sweeps">Open lab →</a></article></div></section>
+    <section class="section contrast" id="platforms"><div class="container"><div class="section-head"><span class="kicker">PORTABILITY</span><h2>One science code.<br><span>Different schedulers.</span></h2><p>Machine-specific resource settings stay in platform adapters; the mathematical implementation stays in the lab.</p></div><div class="platform-grid"><article class="platform"><span class="platform-icon">▦</span><div><h3>Penn State Roar</h3><p>Slurm-based batch submission · CPU and GPU allocations</p></div><strong>sbatch</strong></article><article class="platform"><span class="platform-icon">◇</span><div><h3>ALCF Aurora</h3><p>PBS Professional · specialized accelerator environment</p></div><strong>qsub</strong></article></div><p class="footnote">Cluster examples are illustrative and are not yet live-system validated. Site allocation, queue and security policies take precedence.</p></div></section>
+    <section class="section container" id="instructors"><div class="teach"><div><span class="kicker">FOR EDUCATORS</span><h2>Designed to be taught.</h2><p>Reusable objectives, a sample syllabus, assignments, and assessment rubrics. Students can complete the foundational labs without privileged cluster access.</p><a class="button primary" href="https://github.com/YOUR_USERNAME/hpc-for-scientific-ai/tree/main/instructor">Instructor resources ↗</a></div><div class="teach-note"><span>DESIGN RULE</span><strong>Correctness before performance.<br>Learning before allocation size.</strong><p>Reproducibility and resource stewardship are explicit learning outcomes.</p></div></div></section>
+  </main>
+  <footer><div class="container foot"><div><strong>HPC<span class="accent">/</span>Scientific AI</strong><p>From Your Laptop to a Supercomputer<br>Independent open educational resource · 2026</p></div><div><a href="https://github.com/YOUR_USERNAME/hpc-for-scientific-ai">Source code ↗</a><a href="https://docs.icds.psu.edu/">Roar docs ↗</a><a href="https://docs.alcf.anl.gov/aurora/">Aurora docs ↗</a></div></div></footer>
+</body>
+</html>

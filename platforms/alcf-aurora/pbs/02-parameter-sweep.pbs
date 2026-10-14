@@ -1,0 +1,14 @@
+#!/bin/bash -l
+#PBS -N hpcai-lab02
+#PBS -A REPLACE_WITH_PROJECT
+#PBS -q debug
+#PBS -l select=1
+#PBS -l walltime=00:10:00
+#PBS -l filesystems=home:flare
+#PBS -k doe
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Missing PBS_O_WORKDIR}"
+# Pedagogical only: four tiny sequential tasks share ONE node allocation.
+python3 labs/02-parallel-parameter-sweeps/sweep.py --outdir outputs/sweep
+python3 labs/02-parallel-parameter-sweeps/aggregate.py --indir outputs/sweep

@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If this educational resource helps your teaching or research, please cite it."
+title: "HPC for Scientific AI: From Your Laptop to a Supercomputer"
+authors:
+  - family-names: Singh
+    given-names: Himanshu
+version: 0.1.0
+date-released: 2026-10-14
+license: MIT

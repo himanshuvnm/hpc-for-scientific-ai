@@ -1,0 +1,13 @@
+#!/bin/bash -l
+#PBS -N hpcai-lab01
+#PBS -A REPLACE_WITH_PROJECT
+#PBS -q debug
+#PBS -l select=1
+#PBS -l walltime=00:10:00
+#PBS -l filesystems=home:flare
+#PBS -k doe
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Missing PBS_O_WORKDIR}"
+# Check current ALCF site policy; configure an appropriate Python interpreter.
+python3 labs/01-first-hpc-job/hello.py --output outputs/hello.json
